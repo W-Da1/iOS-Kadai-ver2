@@ -25,29 +25,6 @@ class SearchViewController: UITableViewController, UISearchBarDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(reloadTable(_:)), name:githubData.notificationNameRepository, object: nil)
     }
     
-    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
-        // ↓こうすれば初期のテキストを消せる
-        searchBar.text = ""
-        return true
-    }
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        githubData.urlSessionTaskOfGithubData?.cancel()
-    }
-    
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        //print("ボタンは押してるよ")
-        guard let searchWord = searchBar.text else {return}
-        if !searchWord.isEmpty {
-            githubData.createURLSessionTaskOfGithubData(searchWord)
-            //print("URLセッションタスクは作ったよ")
-            DispatchQueue.global(qos: .userInteractive).async { [weak self] in
-                // これ呼ばなきゃリストが更新されません
-                self?.githubData.urlSessionTaskOfGithubData?.resume()
-            }
-        }
-    }
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "Detail" {
             let detail = segue.destination as! DetailViewController
@@ -83,5 +60,34 @@ extension SearchViewController {
             self?.tableView.reloadData()
         }
     }
+    
+}
+
+extension SearchViewController {
+    
+    func searchBarShouldBeginEditing(_ searchBar: UISearchBar) -> Bool {
+        // ↓こうすれば初期のテキストを消せる
+        searchBar.text = ""
+        return true
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        githubData.urlSessionTaskOfGithubData?.cancel()
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        //print("ボタンは押してるよ")
+        guard let searchWord = searchBar.text else {return}
+        if !searchWord.isEmpty {
+            githubData.createURLSessionTaskOfGithubData(searchWord)
+            //print("URLセッションタスクは作ったよ")
+            DispatchQueue.global(qos: .userInteractive).async { [weak self] in
+                // これ呼ばなきゃリストが更新されません
+                self?.githubData.urlSessionTaskOfGithubData?.resume()
+            }
+        }
+    }
 
 }
+    
+
