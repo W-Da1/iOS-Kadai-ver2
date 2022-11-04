@@ -78,7 +78,7 @@ ViewController.swift,ViewController2.swift→SearchViewController.swift, DetailV
  -  DetailViewControllerがSearchViewControllerの参照を持っているが不要→見直したところその通りでありました．参照削除済み
  -  Cell→dequeueReusableCellを使用することでCellの再利用を行えるよう変更
  -  ダークモードへの対応→[`こちら`](https://qiita.com/gonsee/items/c04b73787730c0e831df)を参考にdynamicColorを導入し，動的にラベルの色を変更
- -  小さい端末や横画面時に詳細画面の表示ができない→UIScrollView及びAuto Layoutにより最もシミュレータ上最も小さな端末(iPhone8,SE)から最も大きな端末(iPad Pro 12.9inch(5generation))まで全てにおいて動作するように改善，横画面表示も対応([`参考1`](https://swallow-incubate.com/archives/blog/20200805))([`参考2`](https://qiita.com/ynakaDream/items/960899183c38949c2ab0))([`参考3`](https://type.jp/et/feature/3112/))([`参考4`](https://developer.apple.com/documentation/uikit/uiscrollview))
+ -  小さい端末や横画面時に詳細画面の表示ができない→UIScrollView及びAuto Layoutによりシミュレータ上最も小さな端末(iPhone8,SE)から最も大きな端末(iPad Pro 12.9inch(5generation))まで全てにおいて動作するように改善，横画面表示も対応([`参考1`](https://swallow-incubate.com/archives/blog/20200805))([`参考2`](https://qiita.com/ynakaDream/items/960899183c38949c2ab0))([`参考3`](https://type.jp/et/feature/3112/))([`参考4`](https://developer.apple.com/documentation/uikit/uiscrollview))
  - 以上，前回指摘していただいた全ての改善点に対応しました．
 
 ### 7.オリジナリティ
