@@ -12,9 +12,9 @@
 
 ### 環境
 
-- IDE：Version 13.2.1 (13C100)
-- Swift：Apple Swift version 5.5.2
-- 開発ターゲット：iOS 15.2
+- IDE：Version 13.4.1 (13F100)
+- Swift：Apple Swift version 5.6.1
+- 開発ターゲット：iOS 15.5
 - サードパーティーライブラリーの利用：オープンソースのものに限り制限しない
 
 ### 動作
