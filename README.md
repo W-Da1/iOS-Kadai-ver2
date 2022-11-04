@@ -2,20 +2,17 @@
 
 ## 概要
 
-本プロジェクトは株式会社ゆめみ（以下弊社）が、弊社に iOS エンジニアを希望する方に出す課題のベースプロジェクトです。本課題が与えられた方は、下記の概要を詳しく読んだ上で課題を取り組んでください。
+本プロジェクトは株式会社ゆめみ（以下弊社）が、弊社に iOS エンジニアを希望する方に出す課題のベースプロジェクトです。インターン申込再挑戦のため、下記の概要を詳しく読んだ上で課題を取り組みました．
 
 ## アプリ仕様
 
 本アプリは GitHub のリポジトリーを検索するアプリです。
-
-![動作イメージ](README_Images/app.gif)
 
 ### 環境
 
 - IDE：Version 13.4.1 (13F100)
 - Swift：Apple Swift version 5.6.1
 - 開発ターゲット：iOS 15.5
-- サードパーティーライブラリーの利用：オープンソースのものに限り制限しない
 
 ### 動作
 
@@ -23,7 +20,7 @@
 2. GitHub API（`search/repositories`）でリポジトリーを検索し、結果一覧を概要（リポジトリ名）で表示
 3. 特定の結果を選択したら、該当リポジトリの詳細（リポジトリ名、オーナーアイコン、プロジェクト言語、Star 数、Watcher 数、Fork 数、Issue 数）を表示
 
-## 取り組んだ課題
+## 前回の挑戦で取り組んだ課題
 ### 1.ソースの可読性向上
 - 命名規約（参考：Swift API Design Guidelines）
 
@@ -58,7 +55,6 @@ guard let ~ else {return} を使用し，以下の項目に対応した．
 
 [`参考1`](https://techblog.recochoku.jp/8058) :【Swift】安全にアンラップするために 〜!（強制アンラップ）とif letとguard letと??（Nil coalescing operator）の使い分け〜
 
-
 ### 3.バグを修正
 - レイアウトエラー
 stackviewの位置が定まっていなかったので修正.
@@ -82,7 +78,7 @@ ViewController.swift,ViewController2.swift→SearchViewController.swift, DetailV
  -  DetailViewControllerがSearchViewControllerの参照を持っているが不要→見直したところその通りでありました．参照削除済み
  -  Cell→dequeueReusableCellを使用することでCellの再利用を行えるよう変更
  -  ダークモードへの対応→[`こちら`](https://qiita.com/gonsee/items/c04b73787730c0e831df)を参考にdynamicColorを導入し，動的にラベルの色を変更
- -  小さい端末や横画面時に詳細画面の表示ができない→UIScrollView及びAutobLayoutにより最もシミュレータ上最も小さな端末(iPhone8,SE)から最も大きな端末(iPad Pro 12.9inch(5generation))まで全てにおいて動作するように改善
+ -  小さい端末や横画面時に詳細画面の表示ができない→UIScrollView及びAutobLayoutにより最もシミュレータ上最も小さな端末(iPhone8,SE)から最も大きな端末(iPad Pro 12.9inch(5generation))まで全てにおいて動作するように改善，横画面表示も対応
  - [`参考1`](https://swallow-incubate.com/archives/blog/20200805)
  - [`参考2`](https://qiita.com/ynakaDream/items/960899183c38949c2ab0)
  - [`参考3`](https://type.jp/et/feature/3112/)
@@ -100,3 +96,6 @@ ViewController.swift,ViewController2.swift→SearchViewController.swift, DetailV
 ### 9.今回の再学習にあたっての参考文献
 [`Swift実践入門`](https://gihyo.jp/book/2020/978-4-297-11213-4)
 [`iOSアプリ設計パターン入門`](https://peaks.cc/books/iOS_architecture)
+
+### 10.コメント
+時間はかかってしまいましたが，本課題を通じてSwift/Xcodeに大分慣れることができました．今回は絶対にコードレビューに受かるぞ！という気持ちで，前回いただいたコードレビューを参考に一生懸命制作いたしました．伸び代には自信があります！
