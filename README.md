@@ -87,15 +87,15 @@ ViewController.swift,ViewController2.swift→SearchViewController.swift, DetailV
  - [`参考2`](https://qiita.com/ynakaDream/items/960899183c38949c2ab0)
  - [`参考3`](https://type.jp/et/feature/3112/)
  - [`参考4`](https://developer.apple.com/documentation/uikit/uiscrollview)
- -- 前回指摘していただいた全ての改善点に対応しました．
+ - 以上，前回指摘していただいた全ての改善点に対応しました．
 
 ### 7.オリジナリティ
-#### UXを意識し，全ての動作を縦スクロールのみで完結するよう「Present Modally」による画面遷移に変更しました．
+ - UXを意識し，全ての動作を縦スクロールのみで完結するよう「Present Modally」による画面遷移に変更しました．
 
 ### 8.今後の課題
-#### GithubDataのユニットテストの導入
-#### GithubDataに対するprotocolを定義し，スタブを作成した上でUIテストを導入
-#### MVCなどのアーキテクチャの導入
+ - GithubDataのユニットテストの導入
+ - GithubDataに対するprotocolを定義し，スタブを作成した上でUIテストを導入
+ - MVCなどのアーキテクチャの導入
 
 ### 9.今回の再学習にあたっての参考文献
 [`Swift実践入門`](https://gihyo.jp/book/2020/978-4-297-11213-4)
