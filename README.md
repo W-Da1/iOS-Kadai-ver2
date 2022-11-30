@@ -94,6 +94,3 @@ ViewController.swift,ViewController2.swift→SearchViewController.swift, DetailV
 ### 9.今回の再学習にあたっての参考文献
 [`Swift実践入門`](https://gihyo.jp/book/2020/978-4-297-11213-4)
 [`iOSアプリ設計パターン入門`](https://peaks.cc/books/iOS_architecture)
-
-### 10.コメント
-時間はかかってしまいましたが，本課題を通じてSwift/Xcodeに大分慣れることができました．今回は絶対にコードレビューに受かるぞ！という気持ちで，前回いただいたコードレビューを参考に一生懸命制作いたしました．伸び代には自信があります！宜しくお願い致します！
